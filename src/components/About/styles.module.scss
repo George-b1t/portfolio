@@ -30,6 +30,8 @@
 
       padding: 0 33px;
 
+      animation: initAboutMeDescription 1s ease forwards;
+
       span {
         font-size: 20px;
       }
@@ -67,6 +69,10 @@
       position: absolute;
       border-radius: 5px;
       z-index: 1;
+
+      opacity: 0;
+
+      animation: initImage 1s ease forwards;
     }
 
     &::after {
@@ -83,6 +89,26 @@
       top: 10px;
       left: 10px;
     }
+  }
+}
+
+@keyframes initAboutMeDescription {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes initImage {
+  from {
+    opacity: 0.2;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 

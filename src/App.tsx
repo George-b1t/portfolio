@@ -2,6 +2,7 @@ import { useState } from "react";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { Tech } from "./components/Tech";
 import styles from "./Home.module.scss";
 
 function App() {
@@ -28,7 +29,8 @@ function App() {
           currentPage={pages[indexPage]}
           setCurrentPage={handleSetCurrentPage}
         />
-        <About />
+        {indexPage === 0 && <About />}
+        {indexPage === 1 && <Tech />}
         <Footer
           next={indexPage < 3 ? () => setIndexPage((i) => i + 1) : null}
           prev={indexPage > 0 ? () => setIndexPage((i) => i - 1) : null}

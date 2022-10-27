@@ -1,0 +1,82 @@
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .techCard {
+    width: 270px;
+    height: 230px;
+
+    border-radius: 5px;
+    background: #1a1a1a;
+
+    padding: 22px 20px;
+
+    &:first-child {
+      animation: initCard 0.8s ease forwards;
+    }
+    &:nth-child(2) {
+      transform: translateY(1000px);
+      animation: initCard 0.8s ease forwards 0.5s;
+    }
+    &:nth-child(3) {
+      transform: translateY(1000px);
+      animation: initCard 0.8s ease forwards 1s;
+    }
+
+    .cardHeader {
+      display: flex;
+      align-items: center;
+
+      img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .cardHeaderSeparator {
+        height: 30px;
+        width: 1px;
+
+        background: #f7f5fb;
+
+        margin: 0 14px;
+      }
+
+      .cardTitle {
+        font-weight: 400;
+        font-size: 22px;
+      }
+    }
+
+    .cardMain {
+      margin-top: 16px;
+
+      p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 18px;
+
+        color: #ffffff;
+
+        background: unset;
+        -webkit-background-clip: unset;
+        -webkit-text-fill-color: unset;
+        background-clip: unset;
+      }
+    }
+  }
+}
+
+@keyframes initCard {
+  from {
+    transform: translateY(1000px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
