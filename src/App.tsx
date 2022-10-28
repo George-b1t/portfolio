@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { About } from "./components/About";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
@@ -10,6 +10,8 @@ function App() {
   const [indexPage, setIndexPage] = useState<number>(0);
   const pages = ["About", "Tech", "Portfolio", "Contact"];
 
+  const [mousePosition, setMousePosition] = useState<number[]>([0, 0]);
+
   function handleSetCurrentPage(page: number) {
     setIndexPage(page);
   }
@@ -18,8 +20,18 @@ function App() {
     return indexPage % 2 === 0;
   }
 
+  useEffect(() => {
+    document.addEventListener("mousemove", (e) => {
+      setMousePosition([e.clientX - 30, e.clientY - 30]);
+    });
+  });
+
   return (
     <div className={styles.container}>
+      <div
+        className={styles.hoverMouse}
+        style={{ left: mousePosition[0], top: mousePosition[1] }}
+      />
       <div
         className={`${styles.subContainer} ${
           isBackgroundCard() ? styles.card : styles.noCard

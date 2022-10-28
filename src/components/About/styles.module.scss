@@ -13,7 +13,7 @@
       text-align: center;
       white-space: nowrap;
       overflow: hidden;
-      animation: typewriter 2s steps(17) 1s 1 normal both,
+      animation: typewriter 2s steps(17) 1.8s 1 normal both,
         blinkTextCursor 1000ms infinite steps(2);
     }
 
@@ -30,7 +30,9 @@
 
       padding: 0 33px;
 
-      animation: initAboutMeDescription 1s ease forwards;
+      transform: translateY(1000px);
+
+      animation: initAboutMeDescription 1s ease forwards 0.8s;
 
       span {
         font-size: 20px;
@@ -72,7 +74,7 @@
 
       opacity: 0;
 
-      animation: initImage 1s ease forwards;
+      animation: initImage 1s ease forwards 1.2s;
     }
 
     &::after {
@@ -104,7 +106,7 @@
 @keyframes initImage {
   from {
     opacity: 0.2;
-    transform: translateX(60px);
+    transform: translateX(1000px);
   }
   to {
     opacity: 1;
