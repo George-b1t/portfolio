@@ -9,11 +9,11 @@
       padding-left: 28px;
       margin-bottom: 22px;
 
-      border-right: 2px solid #fff;
+      border-right: 2px solid #1a1a1a;
       text-align: center;
       white-space: nowrap;
       overflow: hidden;
-      animation: typewriter 2s steps(17) 1.8s 1 normal both,
+      animation: typewriter 2s steps(17) 1.4s 1 normal both,
         blinkTextCursor 1000ms infinite steps(2);
     }
 
@@ -32,7 +32,7 @@
 
       transform: translateY(1000px);
 
-      animation: initAboutMeDescription 1s ease forwards 0.8s;
+      animation: initAboutMeDescription 1s ease forwards 0.4s;
 
       span {
         font-size: 20px;
@@ -74,7 +74,7 @@
 
       opacity: 0;
 
-      animation: initImage 1s ease forwards 1.2s;
+      animation: initImage 1s ease forwards 0.8s;
     }
 
     &::after {

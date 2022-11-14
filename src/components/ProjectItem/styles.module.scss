@@ -12,6 +12,19 @@
 
   padding: 10px;
 
+  animation: startItems .3s ease forwards .5s;
+
+  opacity: 0;
+
+  cursor: pointer;
+
+  transition: .3s ease;
+
+  &:hover {
+    filter: brightness(1.2);
+    transform: scale(1.02);
+  }
+
   .title {
     margin: 12px 0 0 12px;
 
@@ -28,5 +41,14 @@
 
   img {
     border-radius: 5px;
+  }
+}
+
+@keyframes startItems {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

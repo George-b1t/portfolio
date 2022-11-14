@@ -1,0 +1,41 @@
+.container {
+  width: 100vw;
+	height: 100vh;
+
+	position: fixed;
+
+	background: rgba(0, 0, 0, 0.75);
+
+	z-index: 10;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	padding: 20px 40px;
+
+	.content {
+		max-width: 680px;
+		max-height: 650px;
+
+		height: 100%;
+		width: 100%;
+
+		background: #1a1a1a;
+
+		border-radius: 5px;
+		border: 1px solid #6BD0FF;
+
+		h3 {
+			font-weight: 400;
+			font-size: 26px;
+
+			margin: 40px 0 0 60px;
+
+			background: linear-gradient(180deg, #6BD0FF 0%, #1A74E2 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+		}
+	}
+}

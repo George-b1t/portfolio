@@ -15,8 +15,5 @@ p,
 h1,
 h2,
 h3 {
-  background: linear-gradient(180deg, #6bd0ff 0%, #1a74e2 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #1a1a1a;
 }
