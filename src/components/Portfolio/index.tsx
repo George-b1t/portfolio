@@ -1,15 +1,19 @@
 import { ProjectItem } from "../ProjectItem";
 import styles from "./styles.module.scss";
 
-function Portfolio() {
+interface PortfolioProps {
+	setIsOpen: (value: boolean) => void;
+}
+
+function Portfolio({ setIsOpen }: PortfolioProps) {
   return (
     <div className={styles.container}>
       <div className={styles.subContainer}>
         <div className={styles.toPaddingScroll}>
-          <ProjectItem />
-          <ProjectItem />
-          <ProjectItem />
-          <ProjectItem />
+          <ProjectItem setIsOpen={setIsOpen} />
+          <ProjectItem setIsOpen={setIsOpen} />
+          <ProjectItem setIsOpen={setIsOpen} />
+          <ProjectItem setIsOpen={setIsOpen} />
         </div>
       </div>
     </div>

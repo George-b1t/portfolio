@@ -4,8 +4,6 @@
 
 	position: fixed;
 
-	background: rgba(0, 0, 0, 0.75);
-
 	z-index: 10;
 
 	display: flex;
@@ -14,9 +12,20 @@
 
 	padding: 20px 40px;
 
+	.backgroungToClick {
+		position: absolute;
+
+		width: 100%;
+		height: 100%;
+
+		background: rgba(0, 0, 0, 0.75);
+	}
+
 	.content {
-		max-width: 680px;
-		max-height: 650px;
+		position: relative;
+
+		max-width: 700px;
+		max-height: 660px;
 
 		height: 100%;
 		width: 100%;
@@ -26,16 +35,54 @@
 		border-radius: 5px;
 		border: 1px solid #6BD0FF;
 
+		padding: 40px;
+
 		h3 {
 			font-weight: 400;
 			font-size: 26px;
-
-			margin: 40px 0 0 60px;
+			
+			padding-left: 20px;
 
 			background: linear-gradient(180deg, #6BD0FF 0%, #1A74E2 100%);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
+		}
+
+		.closeIcon {
+			width: 30px;
+
+			position: absolute;
+
+			right: 25px;
+			top: 25px;
+
+			cursor: pointer;
+
+			transition: .3s ease;
+
+			&:hover {
+				filter: brightness(0.8);
+				transform: scale(1.2);
+			}
+		}
+
+		.mainImage {
+			width: 100%;
+
+			border-radius: 5px;
+
+			margin: 20px 0;
+		}
+
+		p {
+			padding: 0 20px;
+			
+			font-weight: 400;
+			font-size: 14px;
+			line-height: 20px;
+
+			color: #F7F5FB;
 		}
 	}
 }

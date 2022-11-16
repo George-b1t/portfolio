@@ -52,7 +52,7 @@ function App() {
           />
           {indexPage === 0 && <About />}
           {indexPage === 1 && <Tech />}
-          {indexPage === 2 && <Portfolio />}
+          {indexPage === 2 && <Portfolio setIsOpen={setFormOpen} />}
           <Footer
             next={indexPage < 3 ? () => setIndexPage((i) => i + 1) : null}
             prev={indexPage > 0 ? () => setIndexPage((i) => i - 1) : null}
