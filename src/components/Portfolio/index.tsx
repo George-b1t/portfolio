@@ -10,10 +10,9 @@ function Portfolio({ setIsOpen }: PortfolioProps) {
     <div className={styles.container}>
       <div className={styles.subContainer}>
         <div className={styles.toPaddingScroll}>
-          <ProjectItem setIsOpen={setIsOpen} />
-          <ProjectItem setIsOpen={setIsOpen} />
-          <ProjectItem setIsOpen={setIsOpen} />
-          <ProjectItem setIsOpen={setIsOpen} />
+          {[1,1,1,1,1,1,1].map((item, index) => (
+            <ProjectItem setIsOpen={setIsOpen} index={index} />
+          ))}
         </div>
       </div>
     </div>

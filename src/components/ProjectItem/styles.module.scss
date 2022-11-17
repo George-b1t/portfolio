@@ -12,7 +12,7 @@
 
   padding: 10px;
 
-  animation: startItems .3s ease forwards .5s;
+  animation: startItems .3s ease forwards;
 
   opacity: 0;
 
@@ -22,7 +22,7 @@
 
   &:hover {
     filter: brightness(1.2);
-    transform: scale(1.02);
+    transform: translateY(-10px);
   }
 
   .title {
