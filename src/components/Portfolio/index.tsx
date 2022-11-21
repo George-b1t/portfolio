@@ -1,4 +1,9 @@
 import { ProjectItem } from "../ProjectItem";
+
+import projects from "../../utils/projects.json";
+
+import igNewsPng from "../../assets/projects/ignews.png";
+
 import styles from "./styles.module.scss";
 
 interface PortfolioProps {
@@ -10,8 +15,8 @@ function Portfolio({ setIsOpen }: PortfolioProps) {
     <div className={styles.container}>
       <div className={styles.subContainer}>
         <div className={styles.toPaddingScroll}>
-          {[1,1,1,1,1,1,1].map((item, index) => (
-            <ProjectItem setIsOpen={setIsOpen} index={index} />
+          {projects.map((item, index) => (
+            <ProjectItem setIsOpen={setIsOpen} item={item} index={index} />
           ))}
         </div>
       </div>

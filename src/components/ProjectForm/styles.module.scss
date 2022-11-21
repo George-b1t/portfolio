@@ -19,10 +19,31 @@
 		height: 100%;
 
 		background: rgba(0, 0, 0, 0.75);
+
+		opacity: 1;
+
+		&.openning {
+			animation: showFormBackground .3s ease;
+		}
+
+		&.closing {
+			animation: showFormBackgroundReverse .3s ease forwards;
+		}
 	}
 
 	.content {
 		position: relative;
+
+		opacity: 1;
+		transform: translateY(0);
+
+		&.openning {
+			animation: showFormContent .3s ease;
+		}
+
+		&.closing {
+			animation: showFormContentRervese .3s ease forwards;
+		}
 
 		max-width: 700px;
 		max-height: 660px;
@@ -84,5 +105,45 @@
 
 			color: #F7F5FB;
 		}
+	}
+}
+
+@keyframes showFormBackground {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes showFormBackgroundReverse {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+@keyframes showFormContent {
+	from {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes showFormContentRervese {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateY(100px);
 	}
 }

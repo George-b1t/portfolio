@@ -16,7 +16,7 @@ function Contact() {
 			</div>
 			<div className={styles.fieldTwoItems}>
 				<ContactItem svg={githubSvg} title="Github" info="George-b1t" index={3} link="https://github.com/George-b1t" />
-				<ContactItem svg={linkedinSvg} title="Linkedin" info="george-soares-651b5519b" index={4} link="https://www.linkedin.com/in/george-soares-651b5519b/" />
+				<ContactItem svg={linkedinSvg} title="Linkedin" info="george-soares-cj" index={4} link="https://www.linkedin.com/in/george-soares-cj/" />
 			</div>
 		</div>
 	)

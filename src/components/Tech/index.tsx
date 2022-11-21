@@ -15,9 +15,7 @@ function Tech() {
         </div>
         <div className={styles.cardMain}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni
-            quibusdam deserunt non cum commodi tempore doloribus quia laborum
-            voluptate quisquam.
+            Initially, it didn't make sense to waste time "typing" the code, but it was just starting to use it to see the power that this tool has and how much it is necessary.
           </p>
         </div>
       </div>
@@ -29,9 +27,7 @@ function Tech() {
         </div>
         <div className={styles.cardMain}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni
-            quibusdam deserunt non cum commodi tempore doloribus quia laborum
-            voluptate quisquam.
+            Passionate about this framework, both for the structure and facilities it brings, and for the community around it, which makes it evolve a lot.
           </p>
         </div>
       </div>
@@ -43,9 +39,7 @@ function Tech() {
         </div>
         <div className={styles.cardMain}>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui magni
-            quibusdam deserunt non cum commodi tempore doloribus quia laborum
-            voluptate quisquam.
+            I love backend, even more when talking about node, which has a very good response time in addition to having great libraries that make development a lot easier.
           </p>
         </div>
       </div>
