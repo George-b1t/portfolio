@@ -3,12 +3,14 @@ import styles from "./styles.module.scss";
 // import ignewsImg from "../../assets/projects/ignews.png";
 import closeSvg from "../../assets/close.svg";
 import { useState } from "react";
+import { ProjectProps } from "../ProjectItem";
 
 interface ProjectFormProps {
 	setIsOpen: (value: boolean) => void;
+	project: ProjectProps;
 }
 
-function ProjectForm({ setIsOpen }: ProjectFormProps) {
+function ProjectForm({ setIsOpen, project }: ProjectFormProps) {
 	const [isClosing, setIsClosing] = useState(false);
 
 	function closeModal() {
@@ -24,11 +26,13 @@ function ProjectForm({ setIsOpen }: ProjectFormProps) {
 			<div className={`${styles.backgroungToClick} ${isClosing ? styles.closing : styles.openning}`} onClick={() => closeModal()} />
 
 			<div className={`${styles.content} ${isClosing ? styles.closing : styles.openning}`}>
-				<h3>IgNews</h3>
+				<h3>{project.name}</h3>
 
 				<img className={styles.closeIcon} src={closeSvg} alt="closeSvg" onClick={() => closeModal()} />
+
+				<img className={styles.mainImage} src={`/projects/${project.image}`} alt="ProjectImage" />
 	
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed aliquet ex, non dictum quam. Vestibulum eleifend varius turpis sit amet molestie. Proin at leo neque. Nullam pellentesque dapibus massa, posuere egestas erat varius imperdiet. Suspendisse ut dapibus leo. Duis ornare sapien vitae dui iaculis egestas. Nam suscipit enim ut elit dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum lorem erat, porttitor ac vulputate consectetur, porttitor ac felis. Morbi vel placerat massa, sit amet pharetra purus. Sed at pretium arcu.</p>
+				<p>{project.description}</p>
 			</div>
 		</div>
 	)

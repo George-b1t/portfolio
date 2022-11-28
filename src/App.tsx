@@ -9,8 +9,6 @@ import { Tech } from "./components/Tech";
 import styles from "./Home.module.scss";
 
 function App() {
-  const [formOpen, setFormOpen] = useState(false);
-
   const [indexPage, setIndexPage] = useState<number>(0);
   const pages = ["About", "Tech", "Portfolio", "Contact"];
 
@@ -32,10 +30,6 @@ function App() {
 
   return (
     <div>
-      {formOpen && (
-        <ProjectForm setIsOpen={setFormOpen} />
-      )}
-
       <div className={styles.container}>
         <div
           className={styles.hoverMouse}
@@ -53,7 +47,7 @@ function App() {
           />
           {indexPage === 0 && <About />}
           {indexPage === 1 && <Tech />}
-          {indexPage === 2 && <Portfolio setIsOpen={setFormOpen} />}
+          {indexPage === 2 && <Portfolio />}
           {indexPage === 3 && <Contact />}
           <Footer
             next={indexPage < 3 ? () => setIndexPage((i) => i + 1) : null}

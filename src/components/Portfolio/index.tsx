@@ -1,22 +1,27 @@
-import { ProjectItem } from "../ProjectItem";
+import { ProjectItem, ProjectProps } from "../ProjectItem";
 
 import projects from "../../utils/projects.json";
 
 import igNewsPng from "../../assets/projects/ignews.png";
 
 import styles from "./styles.module.scss";
+import { useState } from "react";
+import { ProjectForm } from "../ProjectForm";
 
-interface PortfolioProps {
-	setIsOpen: (value: boolean) => void;
-}
+function Portfolio() {
+  const [formOpen, setFormOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState<ProjectProps>({} as any);
 
-function Portfolio({ setIsOpen }: PortfolioProps) {
   return (
     <div className={styles.container}>
+      {formOpen && (
+        <ProjectForm setIsOpen={setFormOpen} project={currentProject} />
+      )}
+
       <div className={styles.subContainer}>
         <div className={styles.toPaddingScroll}>
           {projects.map((item, index) => (
-            <ProjectItem setIsOpen={setIsOpen} item={item} index={index} />
+            <ProjectItem setIsOpen={setFormOpen} setProject={setCurrentProject} item={item} index={index} />
           ))}
         </div>
       </div>
