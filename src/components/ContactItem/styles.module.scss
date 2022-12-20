@@ -20,6 +20,10 @@
 	transform: translateY(1000px);
 	transition: .3s ease;
 
+	&:hover {
+		filter: brightness(1.2);
+	}
+
 	a {
 		display: flex;
 

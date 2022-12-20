@@ -2,25 +2,22 @@
 	{
 		"id": 1,
 		"name": "IgNews",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed aliquet ex, non dictum quam. Vestibulum eleifend varius turpis sit amet molestie. Proin at leo neque. Nullam pellentesque dapibus massa, posuere egestas erat varius imperdiet. Suspendisse ut dapibus leo. Duis ornare sapien vitae dui iaculis egestas. Nam suscipit enim ut elit dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum lorem erat, porttitor ac vulputate consectetur, porttitor ac felis. Morbi vel placerat massa, sit amet pharetra purus. Sed at pretium arcu.",
-		"image": "ignews.png"
+		"description": "O IgNews é um dos muitos projetos desenvolvidos na trilha React do Ignite da Rocketseat, o qual não me arrependo de ter feito o investimento.\n\nUm projeto completo, utilizando o GitHub na parte do login, FaunaDB para armazenamento, Prismic CMS para criação de posts e o Stripe para a parte de pagamentos. Sem esquecer do NextJS, que foi essencial para o funcionamento do site.\n\nA ideia do site, é basicamente um sistema de Posts, onde os usuários precisam assinar para poder ler os Posts por completo, caso não assinem, podem apenas ler uma pequena parte de cada Post.",
+		"image": "ignews.png",
+		"starred": true
 	},
 	{
 		"id": 2,
-		"name": "GigaDesign",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed aliquet ex, non dictum quam. Vestibulum eleifend varius turpis sit amet molestie. Proin at leo neque. Nullam pellentesque dapibus massa, posuere egestas erat varius imperdiet. Suspendisse ut dapibus leo. Duis ornare sapien vitae dui iaculis egestas. Nam suscipit enim ut elit dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum lorem erat, porttitor ac vulputate consectetur, porttitor ac felis. Morbi vel placerat massa, sit amet pharetra purus. Sed at pretium arcu.",
-		"image": "gigadesign.png"
+		"name": "UnitLib",
+		"description": "O UnitLib foi realizado com fins acadêmicos. Basicamente, é uma biblioteca online, onde temos usuários normais e administradores. Um administrador é um usuário normal, só que possui algumas permissões a mais, como: Adicionar, remover e editar livros e adicionar novos administradores. Enquanto o usuário normal, pode apenas: Ver as informações dos livros e alugá-los caso queiram ler.\n\nO projeto foi realizado com ReactJS e Primefaces no Frontend, enquanto no Backend foram utilizados o NodeJS e o Prisma (Lib para gerenciamento do banco de dados).\n\nO projeto conta com autenticação (JWT), validação de permissões, upload de imagens (capas dos livros) e de pdf (conteúdo dos livros).",
+		"image": "unitlib.png",
+		"starred": false
 	},
 	{
 		"id": 3,
-		"name": "Podcastr",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed aliquet ex, non dictum quam. Vestibulum eleifend varius turpis sit amet molestie. Proin at leo neque. Nullam pellentesque dapibus massa, posuere egestas erat varius imperdiet. Suspendisse ut dapibus leo. Duis ornare sapien vitae dui iaculis egestas. Nam suscipit enim ut elit dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum lorem erat, porttitor ac vulputate consectetur, porttitor ac felis. Morbi vel placerat massa, sit amet pharetra purus. Sed at pretium arcu.",
-		"image": "podcastr.png"
-	},
-	{
-		"id": 4,
-		"name": "Podcastr",
-		"description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sed aliquet ex, non dictum quam. Vestibulum eleifend varius turpis sit amet molestie. Proin at leo neque. Nullam pellentesque dapibus massa, posuere egestas erat varius imperdiet. Suspendisse ut dapibus leo. Duis ornare sapien vitae dui iaculis egestas. Nam suscipit enim ut elit dictum mollis. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Vestibulum lorem erat, porttitor ac vulputate consectetur, porttitor ac felis. Morbi vel placerat massa, sit amet pharetra purus. Sed at pretium arcu.",
-		"image": "podcastr.png"
+		"name": "GigaDesign",
+		"description": "Meu primeiro projeto, feito para um Designer utilizar como portfólio. O projeto conta com três páginas: Home, onde é apresentada a logomarca do proprietário, chamando bastante atenção com os efeitos de transição utilizados na página; Portfólio, onde o proprietário apresenta seus projetos (Logomarcas e camisas); Contato, onde são apresentadas todas as formas de contato com o proprietário.\n\nO projeto conta apenas com o Frontend, que foi feito utilzando React e todos os efeitos visuais foram realizados utiliozando o CSS puro, 100% manual.",
+		"image": "gigadesign.png",
+		"starred": false
 	}
 ]

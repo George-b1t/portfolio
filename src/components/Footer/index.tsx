@@ -1,26 +1,28 @@
+import { TextProviderProps } from "../../App";
 import styles from "./styles.module.scss";
 
 interface FooterProps {
   next?: (() => void) | null;
   prev?: (() => void) | null;
   backgroundCard: boolean;
+  textProvider: TextProviderProps;
 }
 
-function Footer({ next, prev, backgroundCard }: FooterProps) {
+function Footer({ next, prev, backgroundCard, textProvider }: FooterProps) {
   return (
     <div
       className={`${styles.container} ${backgroundCard ? {} : styles.noCard}`}
     >
       {prev ? (
         <button onClick={() => prev()}>
-          <span>Prev</span>
+          <span>{textProvider.footerButtons.prev}</span>
         </button>
       ) : (
         <br />
       )}
       {next ? (
         <button onClick={() => next()}>
-          <span>Next</span>
+          <span>{textProvider.footerButtons.next}</span>
         </button>
       ) : (
         <br />

@@ -4,15 +4,37 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Portfolio } from "./components/Portfolio";
-import { ProjectForm } from "./components/ProjectForm";
 import { Tech } from "./components/Tech";
 import styles from "./Home.module.scss";
 
+import texts from "./utils/texts.json";
+
+export interface TextProviderProps {
+  pages: string[];
+  footerButtons: {
+    prev: string;
+    next: string;
+  };
+  pageOne: {
+    helloText: string;
+    description: string[];
+  };
+}
+
 function App() {
   const [indexPage, setIndexPage] = useState<number>(0);
-  const pages = ["About", "Tech", "Portfolio", "Contact"];
+
+  const [language, setLanguage] = useState(true);
+
+  const [textProvider, setTextProvider] = useState<TextProviderProps>(texts.english);
 
   const [mousePosition, setMousePosition] = useState<number[]>([0, 0]);
+
+  const pages = textProvider.pages;
+
+  useEffect(() => {
+    setTextProvider(language ? texts.english : texts.portuguese)
+  }, [language]);
 
   function handleSetCurrentPage(page: number) {
     setIndexPage(page);
@@ -36,16 +58,24 @@ function App() {
           style={{ left: mousePosition[0], top: mousePosition[1] }}
         />
         <div
-          className={`${styles.subContainer} ${
-            isBackgroundCard() ? styles.card : styles.noCard
-          }`}
+          className={`${styles.subContainer} ${styles.card}`}
         >
+          <div className={styles.fieldSwitch}>
+            <img src="br.svg" alt="brazil" />
+            <label className={styles.switch}>
+              <input type="checkbox" checked={language} onClick={() => setLanguage(o => !o)} />
+              <span className={`${styles.slider} ${styles.round}`}></span>
+            </label>
+            <img src="us.svg" alt="usa" />
+          </div>
+
           <Header
             backgroundCard={isBackgroundCard()}
             currentPage={pages[indexPage]}
             setCurrentPage={handleSetCurrentPage}
+            textProvider={textProvider}
           />
-          {indexPage === 0 && <About />}
+          {indexPage === 0 && <About textProvider={textProvider} />}
           {indexPage === 1 && <Tech />}
           {indexPage === 2 && <Portfolio />}
           {indexPage === 3 && <Contact />}
@@ -53,6 +83,7 @@ function App() {
             next={indexPage < 3 ? () => setIndexPage((i) => i + 1) : null}
             prev={indexPage > 0 ? () => setIndexPage((i) => i - 1) : null}
             backgroundCard={isBackgroundCard()}
+            textProvider={textProvider}
           />
         </div>
       </div>

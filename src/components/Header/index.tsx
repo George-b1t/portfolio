@@ -1,14 +1,16 @@
 import styles from "./styles.module.scss";
 
 import logo from "../../assets/logo.svg";
+import { TextProviderProps } from "../../App";
 
 interface HeaderProps {
   currentPage: string;
   setCurrentPage: (page: number) => void;
   backgroundCard: boolean;
+  textProvider: TextProviderProps;
 }
 
-function Header({ currentPage, setCurrentPage, backgroundCard }: HeaderProps) {
+function Header({ currentPage, setCurrentPage, backgroundCard, textProvider }: HeaderProps) {
   return (
     <div className={styles.container}>
       <div className={styles.leftHeader}>
@@ -34,30 +36,30 @@ function Header({ currentPage, setCurrentPage, backgroundCard }: HeaderProps) {
           <a
             href="#"
             onClick={() => setCurrentPage(0)}
-            className={currentPage === "About" ? styles.active : ""}
+            className={currentPage === textProvider.pages[0] ? styles.active : ""}
           >
-            About
+            {textProvider.pages[0]}
           </a>
           <a
             href="#"
             onClick={() => setCurrentPage(1)}
-            className={currentPage === "Tech" ? styles.active : ""}
+            className={currentPage === textProvider.pages[1] ? styles.active : ""}
           >
-            Tech
+            {textProvider.pages[1]}
           </a>
           <a
             href="#"
             onClick={() => setCurrentPage(2)}
-            className={currentPage === "Portfolio" ? styles.active : ""}
+            className={currentPage === textProvider.pages[2] ? styles.active : ""}
           >
-            Portfolio
+            {textProvider.pages[2]}
           </a>
           <a
             href="#"
             onClick={() => setCurrentPage(3)}
-            className={currentPage === "Contact" ? styles.active : ""}
+            className={currentPage === textProvider.pages[3] ? styles.active : ""}
           >
-            Contact
+            {textProvider.pages[3]}
           </a>
           <div className={`${styles.animation} ${styles[currentPage]}`} />
         </ul>

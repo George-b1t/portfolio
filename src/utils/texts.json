@@ -1,0 +1,50 @@
+{
+  "portuguese": {
+    "pages": [
+      "Sobre",
+      "Tech",
+      "Portfólio",
+      "Contato"
+    ],
+    "footerButtons": {
+      "prev": "Voltar",
+      "next": "Próximo"
+    },
+    "pageOne": {
+      "helloText": "Olá, sou George!",
+      "description": [
+        "Desenvolvedor",
+        "curioso",
+        "autodidata",
+        "e",
+        "apaixonado",
+        "pelo que faço.",
+        "Saiba que sou o melhor no que faço, me dedico muito, não tenho dúvida disso!"
+      ]
+    }
+  },
+  "english": {
+    "pages": [
+      "About",
+      "Tech",
+      "Portfolio",
+      "Contact"
+    ],
+    "footerButtons": {
+      "prev": "Prev",
+      "next": "Next"
+    },
+    "pageOne": {
+      "helloText": "Hey, I'm George!",
+      "description": [
+        "Developer",
+        "curious",
+        "self-taught",
+        "and",
+        "passionate",
+        "about what I do.",
+        "Know that I am the best at what I do, I dedicate myself a lot, I have no doubt about that!"
+      ]
+    }
+  }
+}

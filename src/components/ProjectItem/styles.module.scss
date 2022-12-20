@@ -17,6 +17,8 @@
 
   cursor: pointer;
 
+  position: relative;
+
   transition: .3s ease;
 
   &:hover {
@@ -39,8 +41,15 @@
     background-clip: unset;
   }
 
-  img {
+  .projectImage {
     border-radius: 5px;
+  }
+
+  .star {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    width: 25px;
   }
 }
 

@@ -1,12 +1,17 @@
 import styles from "./styles.module.scss";
 
 import profileImg from "../../assets/profile.png";
+import { TextProviderProps } from "../../App";
 
-function About() {
+interface AboutProps {
+  textProvider: TextProviderProps;
+}
+
+function About({ textProvider }: AboutProps) {
   return (
     <div className={styles.container}>
       <div className={styles.fieldAboutMe}>
-        <h1 className={styles.aboutMeHello}>Hey, I'm George!</h1>
+        <h1 className={styles.aboutMeHello}>{textProvider.pageOne.helloText}</h1>
 
         <div className={styles.fieldAboutMeDescription}>
           <div className={styles.encapulateDescription}>
@@ -15,10 +20,9 @@ function About() {
             <span className={styles.constValue}>
               `{"\n"}
               <div className={styles.toPadding}>
-                <strong>Developer</strong>, <strong>curious</strong>,{" "}
-                <strong>self-taught</strong> and <strong>passionate</strong>{" "}
-                about what I do.{"\n\n"}Know that I am the best at what I do, I
-                dedicate myself a lot, I have no doubt about that!
+                <strong>{textProvider.pageOne.description[0]}</strong>, <strong>{textProvider.pageOne.description[1]}</strong>,{" "}
+                <strong>{textProvider.pageOne.description[2]}</strong> {textProvider.pageOne.description[3]} <strong>{textProvider.pageOne.description[4]}</strong>{" "}
+                {textProvider.pageOne.description[5]}{"\n\n"}{textProvider.pageOne.description[6]}
               </div>
               `
             </span>

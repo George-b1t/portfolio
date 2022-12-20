@@ -25,9 +25,9 @@
 
     border-radius: 5px;
 
-    &.hasShadow {
-      // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
+    // &.hasShadow {
+    //   // box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    // }
 
     transition: 1s ease;
 
@@ -129,6 +129,7 @@
     }
 
     .About,
+    .Sobre,
     a:nth-child(1):focus ~ .animation {
       width: 56px;
       left: 21px;
@@ -141,12 +142,14 @@
     }
 
     .Portfolio,
+    .Portfólio,
     a:nth-child(3):focus ~ .animation {
       width: 96px;
       left: 207px;
     }
 
     .Contact,
+    .Contato,
     a:nth-child(4):focus ~ .animation {
       width: 74px;
       left: 345px;
