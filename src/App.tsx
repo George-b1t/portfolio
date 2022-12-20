@@ -19,6 +19,11 @@ export interface TextProviderProps {
     helloText: string;
     description: string[];
   };
+  pageTwo: {
+    typescript: string;
+    react: string;
+    node: string;
+  }
 }
 
 function App() {
@@ -76,7 +81,7 @@ function App() {
             textProvider={textProvider}
           />
           {indexPage === 0 && <About textProvider={textProvider} />}
-          {indexPage === 1 && <Tech />}
+          {indexPage === 1 && <Tech textProvider={textProvider} />}
           {indexPage === 2 && <Portfolio />}
           {indexPage === 3 && <Contact />}
           <Footer

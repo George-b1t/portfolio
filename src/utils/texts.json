@@ -21,6 +21,11 @@
         "pelo que faço.",
         "Saiba que sou o melhor no que faço, me dedico muito, não tenho dúvida disso!"
       ]
+    },
+    "pageTwo": {
+      "typescript": "Inicialmente não fazia sentido perder tempo “dando tipos” ao código, mas foi só começar a usar para ver o poder que essa ferramenta tem e o quanto ela é necessária.",
+      "react": "Apaixonado por esse framework, tanto pela estrutura e facilidades que ele traz, quanto pela comunidade ao seu redor, que o faz evoluir muito.",
+      "node": "Adoro backend, ainda mais quando falamos de node, que tem um tempo de resposta muito bom, além de ter ótimas bibliotecas que facilitam muito o desenvolvimento."
     }
   },
   "english": {
@@ -45,6 +50,11 @@
         "about what I do.",
         "Know that I am the best at what I do, I dedicate myself a lot, I have no doubt about that!"
       ]
+    },
+    "pageTwo": {
+      "typescript": "Initially it didn't make sense to waste time “giving types” to the code, but it was just starting to use it to see the power that this tool has and how much it is necessary.",
+      "react": "Passionate about this framework, both for the structure and facilities it brings, and for the community around it, which makes it evolve a lot.",
+      "node": "I love the backend, even more so when we talk about node, which has a very good response time, in addition to having great libraries that make development a lot easier."
     }
   }
 }

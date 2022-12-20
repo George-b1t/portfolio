@@ -1,10 +1,15 @@
 import styles from "./styles.module.scss";
+import { TextProviderProps } from "../../App";
 
 import reactSvg from "../../assets/react.svg";
 import typescriptSvg from "../../assets/typescript.svg";
 import nodeSvg from "../../assets/node.svg";
 
-function Tech() {
+interface AboutProps {
+  textProvider: TextProviderProps;
+}
+
+function Tech({ textProvider }: AboutProps) {
   return (
     <div className={styles.container}>
       <div className={styles.techCard}>
@@ -15,7 +20,7 @@ function Tech() {
         </div>
         <div className={styles.cardMain}>
           <p>
-            Initially, it didn't make sense to waste time "typing" the code, but it was just starting to use it to see the power that this tool has and how much it is necessary.
+            {textProvider.pageTwo.typescript}
           </p>
         </div>
       </div>
@@ -27,7 +32,7 @@ function Tech() {
         </div>
         <div className={styles.cardMain}>
           <p>
-            Passionate about this framework, both for the structure and facilities it brings, and for the community around it, which makes it evolve a lot.
+            {textProvider.pageTwo.react}
           </p>
         </div>
       </div>
@@ -39,7 +44,7 @@ function Tech() {
         </div>
         <div className={styles.cardMain}>
           <p>
-            I love backend, even more when talking about node, which has a very good response time in addition to having great libraries that make development a lot easier.
+            {textProvider.pageTwo.node}
           </p>
         </div>
       </div>
